@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114030825095646550}
   - component: {fileID: 65012833943860570}
   - component: {fileID: 54914536461062042}
+  - component: {fileID: 114565754498873852}
   m_Layer: 0
   m_Name: Cop
   m_TagString: Cop
@@ -70,8 +71,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.55, y: 4.12, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.7, y: 0.9, z: 0.2}
+  m_Center: {x: -0.6, y: -0.4, z: 0}
 --- !u!114 &114030825095646550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b55a432de66374d8a7122f62311108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMoveSpeed: -0.015
+  xMoveSpeed: -0.005
   maxX: -8
 --- !u!114 &114268405321542518
 MonoBehaviour:
@@ -108,9 +109,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbdb574b1049347b9dbd81b99af66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 100
   currentHealth: 0
   deathTestDamage: 0
+--- !u!114 &114565754498873852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481149999998058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1efe6346579e25438faad8c7efa2b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
 --- !u!212 &212609410289712766
 SpriteRenderer:
   m_ObjectHideFlags: 1

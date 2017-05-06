@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1E628F7D-A2CA-39EB-A49E-169CA090B0E4}</ProjectGuid>
+    <ProjectGuid>{C1FDC0E9-2063-8683-0732-BC9FAA49E4BF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,13 +46,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\DealDamage.cs" />
+     <Compile Include="Assets\Scripts\CheckDonutAvailable.cs" />
+     <Compile Include="Assets\Scripts\Cooldown.cs" />
+     <Compile Include="Assets\Scripts\CopDealDamage.cs" />
+     <Compile Include="Assets\Scripts\CurrencyValue.cs" />
      <Compile Include="Assets\Scripts\Death.cs" />
+     <Compile Include="Assets\Scripts\DonutCost.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\HoverReveal.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\OnClickSpawn.cs" />
+     <Compile Include="Assets\Scripts\PlaceDonut.cs" />
      <Compile Include="Assets\Scripts\ProduceProjectile.cs" />
+     <Compile Include="Assets\Scripts\ProjectileDealDamage.cs" />
+     <Compile Include="Assets\Scripts\TileDonutPlacement.cs" />
+     <Compile Include="Assets\Scripts\WinCondition.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Installs/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

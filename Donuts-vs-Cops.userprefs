@@ -1,0 +1,19 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\WinCondition.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Cooldown.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CheckDonutAvailable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\OnClickSpawn.cs" Line="29" Column="30" />
+      <File FileName="Assets\Scripts\CopDealDamage.cs" Line="23" Column="38" />
+      <File FileName="Assets\Scripts\ProjectileDealDamage.cs" Line="11" Column="3" />
+      <File FileName="Assets\Scripts\Death.cs" Line="24" Column="66" />
+      <File FileName="Assets\Scripts\CurrencyValue.cs" Line="28" Column="21" />
+      <File FileName="Assets\Scripts\WinCondition.cs" Line="20" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

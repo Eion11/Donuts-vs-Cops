@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class HoverReveal : MonoBehaviour {
 
-	public bool visible;
-
+	public bool mouseOver;
+	public bool empty;
 	// Use this for initialization
 	void Start ()
 	{
-		visible = false;
+		mouseOver = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if (visible)
+		empty = GetComponent<OnClickSpawn> ().isTileEmpty;
+
+		if (mouseOver && !empty) 
+		{
+			GetComponent<SpriteRenderer> ().color = new Color (1, 0, 0, 0.4f);
+		}
+		else if (mouseOver)
 		{
 			GetComponent<SpriteRenderer> ().color = new Color (1, 1, 1, 0.25f);
 		}
@@ -27,11 +33,11 @@ public class HoverReveal : MonoBehaviour {
 
 	private void OnMouseOver()
 	{
-		visible = true;
+		mouseOver = true;
 	}
 
 	private void OnMouseExit()
 	{
-		visible = false;
+		mouseOver = false;
 	}
 }

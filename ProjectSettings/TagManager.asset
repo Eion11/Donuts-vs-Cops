@@ -4,16 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ground
-  - Crate
-  - Enemy
-  - Wall
-  - Obstacle
-  - Bullet
-  - BombPickup
-  - ExplosionFX
-  - HealthBar
   - Cop
+  - SprinklerCost
+  - Donut
+  - SprinklerDonut
+  - PlayerCurrency
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -23,11 +19,11 @@ TagManager:
   - UI
   - 
   - 
-  - Bombs
-  - Player
-  - Enemies
-  - Pickups
-  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
