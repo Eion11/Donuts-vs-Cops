@@ -14,9 +14,11 @@ public class CopDealDamage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (donutInFrontOf.GetComponent<Health>().currentHealth <= 0) 
+		if (donutInFrontOf != null)
 		{
-			GetComponent<Movement> ().xMoveSpeed = -0.015f;
+			if (donutInFrontOf.GetComponent<Health> ().currentHealth <= 0) {
+				GetComponent<Movement> ().xMoveSpeed = -0.015f;
+			}
 		}
 	}
 
@@ -32,6 +34,8 @@ public class CopDealDamage : MonoBehaviour {
 
 	void dealDamageToDonut()
 	{
-		donutInFrontOf.gameObject.GetComponent<Health> ().takeDamage (damageAmount);
+		if (donutInFrontOf != null) {
+			donutInFrontOf.gameObject.GetComponent<Health> ().takeDamage (damageAmount);
+		}
 	}
 }

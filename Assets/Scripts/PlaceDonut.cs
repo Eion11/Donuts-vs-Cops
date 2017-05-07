@@ -9,8 +9,8 @@ public class PlaceDonut : MonoBehaviour {
 	GameObject playerCurrency;
 
 	public Texture2D cursorTexture;
-	public Vector2 hotSpot = Vector2.zero;
-	public CursorMode cursorMode = CursorMode.Auto;
+	private Vector2 hotSpot = Vector2.zero;
+	private CursorMode cursorMode = CursorMode.Auto;
 	public bool cursorChanged = false;
 
 	// Use this for initialization
@@ -29,9 +29,6 @@ public class PlaceDonut : MonoBehaviour {
 	public void OnClick()
 	{
 		if (donut.GetComponent<CheckDonutAvailable> ().donutAvialable) {
-			Debug.Log (donutCost.GetComponent<DonutCost> ().donutCost);
-
-
 			Cursor.SetCursor (cursorTexture, hotSpot, cursorMode);
 			cursorChanged = true;
 		}

@@ -6,11 +6,13 @@ public class Movement : MonoBehaviour {
 
     public float xMoveSpeed;
     public float maxX;
+	private GameObject winCondition;
+	private bool reachedEnd = false;
 
     // Use this for initialization
     void Start()
     {
-
+		winCondition = GameObject.Find ("WinCondition");
     }
 
     // Update is called once per frame
@@ -43,7 +45,12 @@ public class Movement : MonoBehaviour {
         {
             if (transform.position.x < maxX)
             {
-                GetComponent<Health>().takeDamage(GetComponent<Health>().maxHealth);
+				xMoveSpeed = 0;
+
+				if (reachedEnd == false) {
+					winCondition.GetComponent<WinCondition> ().copsPassed += 1;
+					reachedEnd = true;
+				}
             }
         }
     }

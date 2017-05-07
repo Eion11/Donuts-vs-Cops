@@ -23,6 +23,5 @@ public class ProjectileDealDamage : MonoBehaviour {
 			other.gameObject.GetComponent<Health>().takeDamage(damageAmount);
 			GetComponent<Health>().takeDamage(GetComponent<Health>().currentHealth);
 		}        
-
 	}
 }

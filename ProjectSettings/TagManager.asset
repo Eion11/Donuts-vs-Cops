@@ -10,6 +10,7 @@ TagManager:
   - SprinklerDonut
   - PlayerCurrency
   - Projectile
+  - WinCondition
   layers:
   - Default
   - TransparentFX

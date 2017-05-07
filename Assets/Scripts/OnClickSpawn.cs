@@ -7,6 +7,7 @@ public class OnClickSpawn : MonoBehaviour {
     public GameObject donutPrefab;
     GameObject donutClone;
 	public bool isTileEmpty = true;
+	public string tileRow = "";
 
     // Use this for initialization
     void Start ()
@@ -29,7 +30,6 @@ public class OnClickSpawn : MonoBehaviour {
 			GameObject playerCurrency = GameObject.FindWithTag ("PlayerCurrency");
 
 			if (cursor.GetComponent<PlaceDonut>().cursorChanged && isTileEmpty) {
-				Debug.Log ("Mouse Cursor is Donut!");
 				PlaceTower ();
 
 				Cursor.SetCursor (null, Vector2.zero, CursorMode.Auto);
@@ -45,7 +45,7 @@ public class OnClickSpawn : MonoBehaviour {
     {
 		donutClone = Instantiate (donutPrefab, transform.position, Quaternion.identity) as GameObject;
 		donutClone.GetComponent<TileDonutPlacement>().setTileString (this.transform.name);
-	
+		donutClone.GetComponent<ProduceProjectile> ().setLane (tileRow);
 		GameObject donut = GameObject.FindWithTag ("SprinklerDonut");
 		donut.GetComponent<Cooldown> ().startCooldown ();
     }
