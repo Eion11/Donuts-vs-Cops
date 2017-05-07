@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootOnLane : MonoBehaviour {
-
+public class ShootOnLane : MonoBehaviour
+{
 	public bool copActive = false;
 	private Collider copInLane;
+
 	// Use this for initialization
-	void Start () {
-		GetComponent<Renderer> ().enabled = false;
+	void Start()
+	{
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update()
+	{
 		// This means the cop has been destroyed, and no longer in the lane
-		if (copActive == true && copInLane == null) {
+		if (copActive == true && copInLane == null)
+		{
 			copActive = false;
 		}
 	}
