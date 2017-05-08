@@ -34,6 +34,7 @@ public class Death : MonoBehaviour
 				winCondition.GetComponent<WinCondition>().copsKilled += 1;
 				transform.position = new Vector3(-20, -20, 1);
 			}
+
 			Destroy(gameObject);
 		}
 	}

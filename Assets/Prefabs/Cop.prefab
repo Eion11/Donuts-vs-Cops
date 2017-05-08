@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b55a432de66374d8a7122f62311108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMoveSpeed: -0.005
+  xMoveSpeed: -0.0075
   maxX: -7.5
 --- !u!114 &114268405321542518
 MonoBehaviour:
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathAtHealth: 0
-  currencyOnDeath: 75
+  currencyOnDeath: 50
 --- !u!114 &114351843402291206
 MonoBehaviour:
   m_ObjectHideFlags: 1

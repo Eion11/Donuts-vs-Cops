@@ -7,7 +7,7 @@ public class Cooldown : MonoBehaviour
 {
 	public bool onCooldown;
 	public float timeStamp;
-	public float cooldownTime = 5;
+	public float cooldownTime = 10;
 
 	// Use this for initialization
 	void Start()
@@ -21,7 +21,7 @@ public class Cooldown : MonoBehaviour
 		if (timeStamp <= Time.time)
 		{
 			onCooldown = false;
-			GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+
 		}
 	}
 
@@ -31,6 +31,6 @@ public class Cooldown : MonoBehaviour
 		onCooldown = true;
 
 		timeStamp = Time.time + cooldownTime;
-		GetComponent<Image>().color = new Color32(50, 50, 50, 255);
+
 	}
 }

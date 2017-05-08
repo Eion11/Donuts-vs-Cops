@@ -84,6 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathAtHealth: 0
+  currencyOnDeath: 0
 --- !u!114 &114529030967587432
 MonoBehaviour:
   m_ObjectHideFlags: 1

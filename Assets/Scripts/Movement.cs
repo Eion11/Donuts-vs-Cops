@@ -50,6 +50,7 @@ public class Movement : MonoBehaviour
 				if (reachedEnd == false)
 				{
 					winCondition.GetComponent<WinCondition>().copsPassed += 1;
+					winCondition.GetComponent<WinCondition>().copsKilled += 1;
 					reachedEnd = true;
 				}
 			}

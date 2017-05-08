@@ -60,6 +60,8 @@
      <Compile Include="Assets\Scripts\ProduceProjectile.cs" />
      <Compile Include="Assets\Scripts\ProjectileDealDamage.cs" />
      <Compile Include="Assets\Scripts\ShootOnLane.cs" />
+     <Compile Include="Assets\Scripts\Test Scripts\CopsMove.cs" />
+     <Compile Include="Assets\Scripts\Test Scripts\CopsTakeDamage.cs" />
      <Compile Include="Assets\Scripts\TileDonutPlacement.cs" />
      <Compile Include="Assets\Scripts\WinCondition.cs" />
      <Compile Include="Assets\UnityTestTools\Assertions\AssertionComponent.cs" />

@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onCooldown: 0
   timeStamp: 0
-  cooldownTime: 2
+  cooldownTime: 8
 --- !u!4 &384929672 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4570686164115690, guid: 35b2d50c419a48a4fa85ea40031e12ab,
@@ -1462,8 +1462,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 456125112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68, y: -0.8, z: 0.016011782}
-  m_LocalScale: {x: 12.167182, y: 1, z: 1}
+  m_LocalPosition: {x: 4.96, y: -0.8, z: 0.016011782}
+  m_LocalScale: {x: 0.885909, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 36
@@ -3014,8 +3014,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1146324200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68, y: 2.4, z: 0.016011782}
-  m_LocalScale: {x: 12.167182, y: 1, z: 1}
+  m_LocalPosition: {x: 4.96, y: 2.4, z: 0.016011782}
+  m_LocalScale: {x: 0.885909, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 34
@@ -3193,8 +3193,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1228354009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68, y: -2.39, z: 0.016011782}
-  m_LocalScale: {x: 12.167182, y: 1, z: 1}
+  m_LocalPosition: {x: 4.96, y: -2.39, z: 0.016011782}
+  m_LocalScale: {x: 0.885909, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 37
@@ -3881,8 +3881,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1552840967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68, y: 0.77, z: 0.016011782}
-  m_LocalScale: {x: 12.167182, y: 1, z: 1}
+  m_LocalPosition: {x: 4.96, y: 0.77, z: 0.016011782}
+  m_LocalScale: {x: 0.885909, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 35
@@ -3980,7 +3980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015aaf4aa7e61ff4ca51fc0c38488b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: 75
+  currency: 200
   MAX_VALUE: 9999
 --- !u!114 &1577212822
 MonoBehaviour:
@@ -5238,8 +5238,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2045479942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68, y: -4.04, z: 0.016011782}
-  m_LocalScale: {x: 12.167182, y: 1, z: 1}
+  m_LocalPosition: {x: 4.96, y: -4.04, z: 0.016011782}
+  m_LocalScale: {x: 0.885909, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 38

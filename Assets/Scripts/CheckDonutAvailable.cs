@@ -24,6 +24,11 @@ public class CheckDonutAvailable : MonoBehaviour
 		if (checkPlayerHasEnoughMoney() && checkDonutOnCooldown())
 		{
 			donutAvialable = true;
+			GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+		}
+		else
+		{
+			GetComponent<Image>().color = new Color32(50, 50, 50, 255);
 		}
 	}
 

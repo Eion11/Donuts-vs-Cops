@@ -23,19 +23,20 @@ public class WinCondition : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (checkPlayerWin())
-		{
-			winLoseText.GetComponent<Text>().text = "VICTORY";
-			winLoseText.GetComponent<Text>().color = new Color(0, 255, 0);
-			Time.timeScale = 0;
-		}
-		else if (checkPlayerLose())
+		if (checkPlayerLose())
 		{
 			winLoseText.GetComponent<Text>().text = "DEFEAT";
 			winLoseText.GetComponent<Text>().color = new Color(255, 0, 0);
 
 			Time.timeScale = 0;
 		}
+		else if (checkPlayerWin())
+		{
+			winLoseText.GetComponent<Text>().text = "VICTORY";
+			winLoseText.GetComponent<Text>().color = new Color(0, 255, 0);
+			Time.timeScale = 0;
+		}
+
 	}
 
 	bool checkPlayerWin()
