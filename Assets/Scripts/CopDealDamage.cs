@@ -4,43 +4,91 @@ using UnityEngine;
 
 public class CopDealDamage : MonoBehaviour
 {
-	public double damageAmount = 0;
-	Collider donutInFrontOf;
+	public double damageAmount = 0;		// the amount of damage the cop will do - set this in the inspector
+	private Collider donutInFrontOfCop; // the donut that will be in front of the cop (null if there is no donut)
 
-	// Use this for initialization
 	void Start()
 	{
 		InvokeRepeating("dealDamageToDonut", 0.5f, 0.5f);
-
 	}
-	
-	// Update is called once per frame
+
 	void Update()
 	{
-		if (donutInFrontOf != null)
+
+	}
+
+	void OnTriggerEnter(Collider obj)
+	{
+		if (isObjectADonut(obj))
 		{
-			if (donutInFrontOf.GetComponent<Health>().currentHealth <= 0)
+			donutInFrontOfCop = obj;
+			setCopMovement(CopMoveState.STOPPED);
+		}
+	}
+
+	private void dealDamageToDonut()
+	{
+		if (isDonutInFrontOfCop())
+		{
+			damageDonut();
+
+			if (checkIfDonutIsDead())
 			{
-				GetComponent<Movement>().xMoveSpeed = -0.015f;
+				setCopMovement(CopMoveState.MOVING);
 			}
 		}
 	}
 
-	void OnTriggerEnter(Collider other)
+
+
+
+	//------------------------
+	//---- Little Methods ----
+	//------------------------
+
+	private void damageDonut()
 	{
-		if (other.gameObject.tag == "Donut")
+		donutInFrontOfCop.gameObject.GetComponent<Health>().takeDamage(damageAmount);
+	}
+
+	private bool checkIfDonutIsDead()
+	{
+		if (donutInFrontOfCop.GetComponent<Health>().currentHealth <= 0)
+			return true;
+
+		return false;
+	}
+
+	private bool isObjectADonut(Collider obj)
+	{
+		if (obj.gameObject.tag == "Donut")
+			return true;
+
+		return false;
+	}
+
+	private bool isDonutInFrontOfCop()
+	{
+		if (donutInFrontOfCop != null)
+			return true;
+
+		return false;
+	}
+
+	private void setCopMovement(CopMoveState moveState)
+	{
+		if (moveState == CopMoveState.MOVING)
 		{
-			donutInFrontOf = other;
-			GetComponent<Movement>().xMoveSpeed = 0;
+			GetComponent<Movement>().setMoveSpeedToDefault();
+		}
+		else if (moveState == CopMoveState.STOPPED)
+		{
+			GetComponent<Movement>().setMoveSpeedStopped();
 		}
 	}
 
-
-	void dealDamageToDonut()
+	private enum CopMoveState
 	{
-		if (donutInFrontOf != null)
-		{
-			donutInFrontOf.gameObject.GetComponent<Health>().takeDamage(damageAmount);
-		}
+		MOVING, STOPPED
 	}
 }

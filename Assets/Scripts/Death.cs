@@ -1,42 +1,84 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Death : MonoBehaviour
 {
-	public double deathAtHealth = 0;
-	private GameObject playerCurrency;
-	private GameObject winCondition;
-	public int currencyOnDeath = 35;
+	private double deathAtHealth = 0;	// what health the thing will die at
+	private GameObject playerCurrency; 	// used to add currency to the player on death
+	private GameObject winCondition;    // used to update the win condition
+	public int currencyOnDeath = 35;	// how  much currency the object will give on death - update in inspector
 
-	// Use this for initialization
 	void Start()
 	{
 		playerCurrency = GameObject.FindWithTag("PlayerCurrency");
 		winCondition = GameObject.Find("WinCondition");
+
+		// constantly check that the object is dead
+		InvokeRepeating("checkIfDead", 0, 0.1f);
 	}
 
-	// Update is called once per frame
 	void Update()
 	{
-		if (GetComponent<Health>().currentHealth == deathAtHealth)
+		
+	}
+
+	private void checkIfDead()
+	{
+		if (isDead())
 		{
-			if (this.tag.Equals("Donut"))
-			{
-				string tileName = GetComponent<TileDonutPlacement>().getTileString();
-
-				GameObject tile = GameObject.Find(tileName);
-				tile.GetComponent<OnClickSpawn>().isTileEmpty = true;
-			}
-			else if (this.tag.Equals("Cop"))
-			{
-				playerCurrency.GetComponent<CurrencyValue>().gainCurrency(currencyOnDeath);
-				winCondition.GetComponent<WinCondition>().copsKilled += 1;
-				transform.position = new Vector3(-20, -20, 1);
-			}
-
-			Destroy(gameObject);
+			removeObject();			
 		}
 	}
 
+
+
+
+
+	//------------------------
+	//---- Little Methods ----
+	//------------------------
+
+	private bool isDead()
+	{
+		if (GetComponent<Health>().currentHealth <= deathAtHealth)
+		{
+			return true;
+		}
+
+		return false;
+	}
+
+	private void removeObject()
+	{
+		if (this.tag.Equals("Donut"))
+		{
+			removeDonut();
+		}
+		else if (this.tag.Equals("Cop"))
+		{
+			destroyCop();
+		}
+		
+		Destroy(gameObject);
+	}
+
+	private void removeDonut()
+	{
+		// tell the tile the donut was placed on is empty so that another donut can be placed here again
+		string tileName = GetComponent<DonutTilePlacement>().getTileString();
+
+		GameObject tile = GameObject.Find(tileName);
+		tile.GetComponent<TileProperties>().donutOnTile = false;
+	}
+
+	private void destroyCop()
+	{
+		// if the object was a cop, update the currency, update the wincondition, and move the cop out of the lane
+		playerCurrency.GetComponent<PlayerCurrency>().gainCurrency(currencyOnDeath);
+
+		// increase the win condition by 1 so the game knows when the game will be won
+		winCondition.GetComponent<WinCondition>().copsKilled += 1;
+	}
 }

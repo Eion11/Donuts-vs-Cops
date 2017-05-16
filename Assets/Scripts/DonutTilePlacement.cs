@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileDonutPlacement : MonoBehaviour
+public class DonutTilePlacement : MonoBehaviour
 {
 	private string tileName;
 

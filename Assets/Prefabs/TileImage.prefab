@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114628232551643354}
   - component: {fileID: 61295132690312660}
   - component: {fileID: 114648857929080442}
+  - component: {fileID: 114386438821586196}
   m_Layer: 0
   m_Name: TileImage
   m_TagString: Untagged
@@ -68,6 +69,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.83, y: 13.83}
   m_EdgeRadius: 0
+--- !u!114 &114386438821586196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626966905404992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f94623ecb5e2c34187fd2b75ece0c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  donutOnTile: 0
+  lane: {fileID: 0}
 --- !u!114 &114628232551643354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,7 +93,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d0290932a821f48b1f1c4b699073f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visible: 0
 --- !u!114 &114648857929080442
 MonoBehaviour:
   m_ObjectHideFlags: 1

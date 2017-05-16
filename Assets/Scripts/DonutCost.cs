@@ -5,17 +5,15 @@ using UnityEngine.UI;
 
 public class DonutCost : MonoBehaviour
 {
-	public int donutCost = 75;
+	public int donutCost = 75;	// how much the donut will cost - can set in inspector
 
-	// Use this for initialization
 	void Start()
 	{
-		
+		GetComponent<Text>().text = donutCost.ToString();
 	}
 	
-	// Update is called once per frame
 	void Update()
 	{
-		GetComponent<Text>().text = donutCost.ToString();
+		
 	}
 }

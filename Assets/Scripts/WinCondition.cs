@@ -5,42 +5,49 @@ using UnityEngine.UI;
 
 public class WinCondition : MonoBehaviour
 {
-	public int copKillVictoy = 3;
-	public int copsKilled = 0;
+	public int copKillVictoy = 3;	// the amount of cops you need to kill to win the game --set in inspector--
+	public int copsKilled = 0;      // this will keep track of how many cops have been killed so far
 
-	public int copDefeat = 3;
-	public int copsPassed = 0;
+	public int copDefeat = 3;		// the amount of cops that are aloud to get through before you lose --set in inspector--
+	public int copsPassed = 0;		// this will keep track of how many cops have reached the end
 
-	private GameObject winLoseText;
+	private GameObject winLoseText;	// the object that holds the text that comes on the screen that says victory or defeat
 
 	// Use this for initialization
 	void Start()
 	{
 		winLoseText = GameObject.Find("VictoryLoseText");
 		winLoseText.GetComponent<Text>().text = " ";
+
+		InvokeRepeating("checkIfThePlayerHasWonOrLost", 0, 0.3f);
 	}
 	
 	// Update is called once per frame
 	void Update()
 	{
-		if (checkPlayerLose())
+		
+	}
+
+	private void checkIfThePlayerHasWonOrLost()
+	{
+		if (checkPlayerWin())
+		{
+			winLoseText.GetComponent<Text>().text = "VICTORY";
+			winLoseText.GetComponent<Text>().color = new Color(0, 255, 0);
+			Time.timeScale = 0;
+		}
+		else if (checkPlayerLose())
 		{
 			winLoseText.GetComponent<Text>().text = "DEFEAT";
 			winLoseText.GetComponent<Text>().color = new Color(255, 0, 0);
 
 			Time.timeScale = 0;
 		}
-		else if (checkPlayerWin())
-		{
-			winLoseText.GetComponent<Text>().text = "VICTORY";
-			winLoseText.GetComponent<Text>().color = new Color(0, 255, 0);
-			Time.timeScale = 0;
-		}
-
 	}
 
 	bool checkPlayerWin()
 	{
+		// if the amount of cops killed is greater then the amount required for victory, return true to win the game
 		if (copsKilled >= copKillVictoy)
 		{
 			return true;
@@ -50,6 +57,7 @@ public class WinCondition : MonoBehaviour
 
 	bool checkPlayerLose()
 	{
+		// if the amount of cops that have passed is greater then then amount required to lose, return true to lose the game
 		if (copsPassed >= copDefeat)
 		{
 			return true;

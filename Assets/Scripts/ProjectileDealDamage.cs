@@ -23,7 +23,7 @@ public class ProjectileDealDamage : MonoBehaviour
 		if (other.gameObject.tag == "Cop")
 		{
 			other.gameObject.GetComponent<Health>().takeDamage(damageAmount);
-			GetComponent<Health>().takeDamage(GetComponent<Health>().currentHealth);
+			Destroy(gameObject);
 		}        
 	}
 }

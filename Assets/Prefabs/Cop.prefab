@@ -84,8 +84,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b55a432de66374d8a7122f62311108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMoveSpeed: -0.0075
-  maxX: -7.5
+  xMoveSpeedDefault: 8
+  xMax: -7.5
+  movementDirection: 0
 --- !u!114 &114268405321542518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,7 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b618da6b980b4cf4e81f30932677c5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathAtHealth: 0
   currencyOnDeath: 50
 --- !u!114 &114351843402291206
 MonoBehaviour:
@@ -110,9 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbdb574b1049347b9dbd81b99af66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 80
+  maxHealth: 50
   currentHealth: 0
-  deathTestDamage: 0
 --- !u!114 &114565754498873852
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -4,31 +4,21 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-	public double maxHealth = 10;
-	public double currentHealth;
-	public double deathTestDamage = 0.1;
+	public double maxHealth = 10;       // the max health the object will have
+	[HideInInspector] public double currentHealth;      // the current health of the object - this will be set to the max health when initizliaed
 
-	// Use this for initialization
 	void Start()
 	{
-		currentHealth = maxHealth;	
+		currentHealth = maxHealth;
 	}
-	
-	// Update is called once per frame
+
 	void Update()
 	{
-		takeDamage(deathTestDamage);
+
 	}
 
 	public void takeDamage(double damage)
 	{
-		if (currentHealth - damage >= 0)
-		{
-			currentHealth -= damage;
-		}
-		else
-		{
-			currentHealth = 0;
-		}
+		currentHealth -= damage;
 	}
 }
