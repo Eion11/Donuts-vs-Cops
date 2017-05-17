@@ -8,12 +8,12 @@ public class OnClickSpawnDonut : MonoBehaviour
 {
 	public Object donutPrefab;   // the prefab that will be used to instansiate from
 	private GameObject donutClone;           // the donut that the prefab will be instansiated into
-	private GameObject cursor;
+	private GameObject cursorManager;
 	private GameObject playerCurrency;
 
 	void Start()
 	{
-		cursor = GameObject.Find("Cursor Set On Click");
+		cursorManager = GameObject.Find("Cursor Manager");
 		playerCurrency = GameObject.FindWithTag("PlayerCurrency");
 	}
 
@@ -32,7 +32,7 @@ public class OnClickSpawnDonut : MonoBehaviour
 
 				playerCurrency.GetComponent<PlayerCurrency>().spendCurrency(getDonutCost());
 
-				cursor.GetComponent<SetCursor>().setCursorToDefault();
+				cursorManager.GetComponent<CursorManager>().setCursorToDefault();
 
 				GetComponent<TileProperties>().donutOnTile = true;
 			}
@@ -42,7 +42,7 @@ public class OnClickSpawnDonut : MonoBehaviour
 	private void PlaceTower()
 	{
 		// Create the donut
-		donutPrefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/" + cursor.GetComponent<SetCursor>().selectedDonutName + ".prefab", typeof(GameObject));
+		donutPrefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/" + cursorManager.GetComponent<CursorManager>().selectedDonutName + ".prefab", typeof(GameObject));
 		donutClone = Instantiate(donutPrefab, transform.position, Quaternion.identity) as GameObject;
 
 		// Set some propities of the donut so it knows its name and place
@@ -60,8 +60,8 @@ public class OnClickSpawnDonut : MonoBehaviour
 	//------------------------
 	
 	private bool canPlaceATower()
-	{
-		if (cursor.GetComponent<SetCursor>().cursorChanged && GetComponent<TileProperties>().donutOnTile == false)
+	{		
+		if (cursorManager.GetComponent<CursorManager>().cursorChanged && GetComponent<TileProperties>().donutOnTile == false)
 		{
 			return true;
 		}
@@ -71,12 +71,12 @@ public class OnClickSpawnDonut : MonoBehaviour
 
 	private int getDonutCost()
 	{
-		return GameObject.Find(cursor.GetComponent<SetCursor>().selectedDonutName).GetComponent<CheckDonutAvailableForPurchase>().donutCost;
+		return GameObject.Find(cursorManager.GetComponent<CursorManager>().selectedDonutName).GetComponent<CheckDonutAvailableForPurchase>().donutCost;
 	}
 
 	private void putDonutOnCooldown()
 	{
-		GameObject donut = GameObject.Find(cursor.GetComponent<SetCursor>().selectedDonutName);
+		GameObject donut = GameObject.Find(cursorManager.GetComponent<CursorManager>().selectedDonutName);
 		donut.GetComponent<DonutCooldown>().startDonutCooldown();
 	}
 }
