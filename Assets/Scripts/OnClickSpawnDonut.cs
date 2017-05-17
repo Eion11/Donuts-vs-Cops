@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class OnClickSpawnDonut : MonoBehaviour
 {
-	public GameObject donutPrefab;   // the prefab that will be used to instansiate from
+	public Object donutPrefab;   // the prefab that will be used to instansiate from
 	private GameObject donutClone;           // the donut that the prefab will be instansiated into
 	private GameObject cursor;
 	private GameObject playerCurrency;
@@ -41,6 +42,7 @@ public class OnClickSpawnDonut : MonoBehaviour
 	private void PlaceTower()
 	{
 		// Create the donut
+		donutPrefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/" + cursor.GetComponent<SetCursor>().selectedDonutName + ".prefab", typeof(GameObject));
 		donutClone = Instantiate(donutPrefab, transform.position, Quaternion.identity) as GameObject;
 
 		// Set some propities of the donut so it knows its name and place
