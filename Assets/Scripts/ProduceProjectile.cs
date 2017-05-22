@@ -7,14 +7,13 @@ public class ProduceProjectile : MonoBehaviour
 	public float projectileFireRate;
 	public GameObject projectilePrefab;
 	private GameObject projectileClone;
-
-	public GameObject lane;
+	private GameObject lane;
 	private bool startedShooting = false;
 
 	// Use this for initialization
 	void Start()
 	{
-
+		lane = GetComponent<DonutTilePlacement>().lane;
 	}
 	
 	// Update is called once per frame

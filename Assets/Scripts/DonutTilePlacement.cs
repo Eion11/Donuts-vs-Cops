@@ -5,6 +5,7 @@ using UnityEngine;
 public class DonutTilePlacement : MonoBehaviour
 {
 	private string tileName;
+	public GameObject lane;
 
 	// Use this for initialization
 	void Start()
@@ -18,12 +19,12 @@ public class DonutTilePlacement : MonoBehaviour
 		
 	}
 
-	public void setTileString(string theTileName)
+	public void setTileNameString(string theTileName)
 	{
 		tileName = theTileName;
 	}
 
-	public string getTileString()
+	public string getTileNameString()
 	{
 		return tileName;
 	}

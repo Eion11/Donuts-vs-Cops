@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 212185659965783682}
   - component: {fileID: 114940033160813800}
   - component: {fileID: 114978578750682962}
-  - component: {fileID: 114873793357392650}
   - component: {fileID: 135618583668751248}
   - component: {fileID: 114766453289333678}
   m_Layer: 0
@@ -41,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1018975535500768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.570392, y: -4.123986, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,20 +71,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17b4713678d12c447abe50eb9155e660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114873793357392650
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1018975535500768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47178b6db8e1d6340a2e6ddc4106990d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectileFireRate: 1.5
-  projectilePrefab: {fileID: 1219852322093736, guid: 2577febaf4de1314c9067e67bddce787,
-    type: 2}
   lane: {fileID: 0}
 --- !u!114 &114940033160813800
 MonoBehaviour:
@@ -98,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbdb574b1049347b9dbd81b99af66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 160
   currentHealth: 0
 --- !u!114 &114978578750682962
 MonoBehaviour:
