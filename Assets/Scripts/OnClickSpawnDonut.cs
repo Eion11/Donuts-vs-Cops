@@ -46,8 +46,8 @@ public class OnClickSpawnDonut : MonoBehaviour
 		donutClone = Instantiate(donutPrefab, transform.position, Quaternion.identity) as GameObject;
 
 		// Set some propities of the donut so it knows its name and place
-		donutClone.GetComponent<DonutTilePlacement>().setTileString(this.transform.name);
-		donutClone.GetComponent<ProduceProjectile>().lane = GetComponent<TileProperties>().lane;
+		donutClone.GetComponent<DonutTilePlacement>().setTileNameString(this.transform.name);
+		donutClone.GetComponent<DonutTilePlacement>().lane = GetComponent<TileProperties>().lane;
 
 		putDonutOnCooldown();
 	}

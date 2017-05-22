@@ -67,7 +67,7 @@ public class Death : MonoBehaviour
 	private void removeDonut()
 	{
 		// tell the tile the donut was placed on is empty so that another donut can be placed here again
-		string tileName = GetComponent<DonutTilePlacement>().getTileString();
+		string tileName = GetComponent<DonutTilePlacement>().getTileNameString();
 
 		GameObject tile = GameObject.Find(tileName);
 		tile.GetComponent<TileProperties>().donutOnTile = false;
