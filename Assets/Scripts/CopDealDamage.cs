@@ -17,11 +17,11 @@ public class CopDealDamage : MonoBehaviour
 
 	}
 
-	void OnTriggerEnter(Collider obj)
+	void OnTriggerEnter(Collider collider)
 	{
-		if (isObjectADonut(obj))
+		if (isObjectADonut(collider))
 		{
-			donutInFrontOfCop = obj;
+			donutInFrontOfCop = collider;
 			setCopMovement(CopMoveState.STOPPED);
 		}
 	}

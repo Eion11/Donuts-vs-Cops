@@ -8,7 +8,6 @@ public class Death : MonoBehaviour
 	private double deathAtHealth = 0;	// what health the thing will die at
 	private GameObject playerCurrency; 	// used to add currency to the player on death
 	private GameObject winCondition;    // used to update the win condition
-	public int currencyOnDeath = 35;	// how  much currency the object will give on death - update in inspector
 
 	void Start()
 	{
@@ -75,9 +74,6 @@ public class Death : MonoBehaviour
 
 	private void destroyCop()
 	{
-		// if the object was a cop, update the currency, update the wincondition, and move the cop out of the lane
-		playerCurrency.GetComponent<PlayerCurrency>().gainCurrency(currencyOnDeath);
-
 		// increase the win condition by 1 so the game knows when the game will be won
 		winCondition.GetComponent<WinCondition>().copsKilled += 1;
 	}

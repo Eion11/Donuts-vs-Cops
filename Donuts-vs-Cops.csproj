@@ -86,12 +86,14 @@
     <Compile Include="Assets\Scripts\DonutCooldown.cs" />
     <Compile Include="Assets\Scripts\DonutCost.cs" />
     <Compile Include="Assets\Scripts\DonutTilePlacement.cs" />
+    <Compile Include="Assets\Scripts\GenerateCurrency.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\OnClickSpawnDonut.cs" />
     <Compile Include="Assets\Scripts\PlayerCurrency.cs" />
     <Compile Include="Assets\Scripts\ProduceProjectile.cs" />
     <Compile Include="Assets\Scripts\ProjectileDealDamage.cs" />
+    <Compile Include="Assets\Scripts\ProjectileSlowOnHit.cs" />
     <Compile Include="Assets\Scripts\SetCursor.cs" />
     <Compile Include="Assets\Scripts\SetTileTransparency.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\CopsMove.cs" />

@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114616475061303024}
   - component: {fileID: 135990948208760866}
   - component: {fileID: 114605460142755622}
+  - component: {fileID: 114160805253700628}
   m_Layer: 0
   m_Name: Donut_Slowing
   m_TagString: Donut
@@ -61,6 +62,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &114160805253700628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853980730716076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae78b9d40f6b724a95f5344e8eb91a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowPercentage: 50
+  slowTime: 3
 --- !u!114 &114267433943702970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,7 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b618da6b980b4cf4e81f30932677c5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyOnDeath: 0
 --- !u!114 &114605460142755622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17b4713678d12c447abe50eb9155e660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lane: {fileID: 0}
 --- !u!114 &114616475061303024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,9 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileFireRate: 1.5
-  projectilePrefab: {fileID: 1219852322093736, guid: 2577febaf4de1314c9067e67bddce787,
+  projectilePrefab: {fileID: 1219852322093736, guid: 0253c23c1257cc04b894c7e5c8928942,
     type: 2}
-  lane: {fileID: 0}
 --- !u!135 &135990948208760866
 SphereCollider:
   m_ObjectHideFlags: 1
