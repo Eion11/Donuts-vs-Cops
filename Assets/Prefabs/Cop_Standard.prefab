@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 54914536461062042}
   - component: {fileID: 114565754498873852}
   m_Layer: 0
-  m_Name: Cop
+  m_Name: Cop_Standard
   m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
