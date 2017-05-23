@@ -12,7 +12,6 @@ public class SetCursor : MonoBehaviour
 	private Vector2 hotSpot = Vector2.zero;
 	private CursorMode cursorMode = CursorMode.Auto;
 
-	// Use this for initialization
 	void Start()
 	{
 		cursorManager = GameObject.Find("Cursor Manager");
@@ -20,7 +19,6 @@ public class SetCursor : MonoBehaviour
 		cursorTexture = GetComponentInParent<Image>().sprite.texture;
 	}
 	
-	// Update is called once per frame
 	void Update()
 	{
 			
