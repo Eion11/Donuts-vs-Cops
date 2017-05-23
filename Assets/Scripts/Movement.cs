@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
 
 	void Start()
 	{
+		xMoveSpeedDefault /= 1000;
 		setMoveSpeedToDefault();
 		winCondition = GameObject.Find("WinCondition");
 
@@ -54,6 +55,15 @@ public class Movement : MonoBehaviour
 		}
 	}
 
+	public void slowMovementSpeedTemporarily(float percentage, float seconds)
+	{
+		xMoveSpeed = xMoveSpeedDefault * (percentage / 100);
+		Debug.Log("Slow Temp... " + xMoveSpeed);
+
+		CancelInvoke();
+		Invoke("setMoveSpeedToDefault", seconds);
+	}
+
 
 
 
@@ -64,7 +74,7 @@ public class Movement : MonoBehaviour
 
 	public void setMoveSpeedToDefault()
 	{
-		xMoveSpeed = xMoveSpeedDefault / 1000;
+		xMoveSpeed = xMoveSpeedDefault;
 	}
 
 	public void setMoveSpeedStopped()
@@ -72,7 +82,7 @@ public class Movement : MonoBehaviour
 		xMoveSpeed = 0;
 	}
 
-	
+
 	private void moveObjectRight()
 	{
 		float x = transform.position.x + xMoveSpeed;
