@@ -11,6 +11,8 @@ TagManager:
   - PlayerCurrency
   - Projectile
   - WinCondition
+  - ShowOnPause
+  - UIManager
   layers:
   - Default
   - TransparentFX
