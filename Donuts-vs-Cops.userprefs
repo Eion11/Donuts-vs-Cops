@@ -1,16 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CursorManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UIManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\CopDealDamage.cs" Line="95" Column="1" />
+      <File FileName="Assets\Scripts\CopDealDamage.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Death.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CheckDonutAvailableForPurchase.cs" Line="10" Column="1" />
-      <File FileName="Assets\Scripts\UIManager.cs" Line="80" Column="35" />
-      <File FileName="Assets\Scripts\Movement.cs" Line="13" Column="20" />
-      <File FileName="Assets\Scripts\ProduceProjectile.cs" Line="9" Column="1" />
-      <File FileName="Assets\Scripts\CursorManager.cs" Line="26" Column="1" />
+      <File FileName="Assets\Scripts\CheckDonutAvailableForPurchase.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UIManager.cs" Line="81" Column="38" />
+      <File FileName="Assets\Scripts\Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ProduceProjectile.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CursorManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DonutCooldown.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\DetectCopInLane.cs" Line="43" Column="2" />
+      <File FileName="Assets\Scripts\DetectCopInLane.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DonutCost.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DonutTilePlacement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Health.cs" Line="1" Column="1" />
@@ -20,7 +20,7 @@
       <File FileName="Assets\Scripts\SetCursor.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SetTileTransparency.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TileProperties.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\WinCondition.cs" Line="7" Column="2" />
+      <File FileName="Assets\Scripts\WinCondition.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
