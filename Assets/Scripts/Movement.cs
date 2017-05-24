@@ -57,11 +57,14 @@ public class Movement : MonoBehaviour
 
 	public void slowMovementSpeedTemporarily(float percentage, float seconds)
 	{
-		xMoveSpeed = xMoveSpeedDefault * (percentage / 100);
-		Debug.Log("Slow Temp... " + xMoveSpeed);
+		if (xMoveSpeed != 0)
+		{
+			xMoveSpeed = xMoveSpeedDefault * (percentage / 100);
+			Debug.Log("Slow Temp... " + xMoveSpeed);
 
-		CancelInvoke();
-		Invoke("setMoveSpeedToDefault", seconds);
+			CancelInvoke();
+			Invoke("setMoveSpeedToDefault", seconds);
+		}
 	}
 
 

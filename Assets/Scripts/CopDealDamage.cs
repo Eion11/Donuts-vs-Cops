@@ -19,7 +19,7 @@ public class CopDealDamage : MonoBehaviour
 
 	void OnTriggerEnter(Collider collider)
 	{
-		if (isObjectADonut(collider))
+		if (isColliderADonut(collider))
 		{
 			donutInFrontOfCop = collider;
 			setCopMovement(CopMoveState.STOPPED);
@@ -31,11 +31,6 @@ public class CopDealDamage : MonoBehaviour
 		if (isDonutInFrontOfCop())
 		{
 			damageDonut();
-
-			if (checkIfDonutIsDead())
-			{
-				setCopMovement(CopMoveState.MOVING);
-			}
 		}
 	}
 
@@ -51,18 +46,12 @@ public class CopDealDamage : MonoBehaviour
 		donutInFrontOfCop.gameObject.GetComponent<Health>().takeDamage(damageAmount);
 	}
 
-	private bool checkIfDonutIsDead()
-	{
-		if (donutInFrontOfCop.GetComponent<Health>().currentHealth <= 0)
-			return true;
-
-		return false;
-	}
-
-	private bool isObjectADonut(Collider obj)
+	private bool isColliderADonut(Collider obj)
 	{
 		if (obj.gameObject.tag == "Donut")
+		{
 			return true;
+		}
 
 		return false;
 	}
@@ -70,7 +59,9 @@ public class CopDealDamage : MonoBehaviour
 	private bool isDonutInFrontOfCop()
 	{
 		if (donutInFrontOfCop != null)
+		{
 			return true;
+		}
 
 		return false;
 	}

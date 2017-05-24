@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbdb574b1049347b9dbd81b99af66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 160
+  maxHealth: 140
   currentHealth: 0
 --- !u!114 &114978578750682962
 MonoBehaviour:
@@ -96,7 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b618da6b980b4cf4e81f30932677c5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyOnDeath: 0
 --- !u!135 &135618583668751248
 SphereCollider:
   m_ObjectHideFlags: 1

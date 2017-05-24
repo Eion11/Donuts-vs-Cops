@@ -428,7 +428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   copKillVictoy: 28
   copsKilled: 0
-  copDefeat: 3
+  copDefeat: 1
   copsPassed: 0
 --- !u!4 &195312527
 Transform:
@@ -2037,7 +2037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655a0d95e99e3224e9ca62da9cf863d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  donutCost: 75
+  donutCost: 50
 --- !u!114 &541674047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2284,11 +2284,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.9180627
+      value: -7.89
       objectReference: {fileID: 0}
     - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.20409602
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
       propertyPath: m_LocalPosition.z
