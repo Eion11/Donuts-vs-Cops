@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
 	private float xMoveSpeed;                   // the move speed of the object
 	private GameObject winCondition;            // used to update victory condition (when cops reach deathX, defeat+1)
 	private GameObject manager;
+
 	void Start()
 	{
 		xMoveSpeedDefault /= 1000;
@@ -65,10 +66,13 @@ public class Movement : MonoBehaviour
 		if (xMoveSpeed != 0)
 		{
 			xMoveSpeed = xMoveSpeedDefault * (percentage / 100);
-			Debug.Log("Slow Temp... " + xMoveSpeed);
 
-			CancelInvoke();
+			CancelInvoke("setMoveSpeedToDefault");
 			Invoke("setMoveSpeedToDefault", seconds);
+		}
+		else
+		{
+			CancelInvoke("setMoveSpeedToDefault");
 		}
 	}
 
