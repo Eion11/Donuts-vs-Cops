@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 54914536461062042}
   - component: {fileID: 114565754498873852}
   m_Layer: 0
-  m_Name: Cop
+  m_Name: Cop_Fast
   m_TagString: Cop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b55a432de66374d8a7122f62311108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMoveSpeedDefault: 8
+  xMoveSpeedDefault: 12
   xMax: -7.5
   movementDirection: 0
 --- !u!114 &114268405321542518
@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b618da6b980b4cf4e81f30932677c5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyOnDeath: 50
 --- !u!114 &114351843402291206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,7 +155,7 @@ SpriteRenderer:
   m_SortingLayerID: 1024582385
   m_SortingLayer: 4
   m_SortingOrder: 50
-  m_Sprite: {fileID: 21300000, guid: e8a409af3f504fc4c8a37b7fa15d20c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9ba7f178314558f4cbdf5b036c1ca478, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

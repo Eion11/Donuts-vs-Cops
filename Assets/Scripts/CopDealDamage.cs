@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class CopDealDamage : MonoBehaviour
@@ -9,7 +8,7 @@ public class CopDealDamage : MonoBehaviour
 
 	void Start()
 	{
-		InvokeRepeating("dealDamageToDonut", 0.5f, 0.5f);
+		InvokeRepeating("dealDamageToDonut", 0.5f, 0.5f);	// repeadetly call this method every x seconds
 	}
 
 	void Update()
@@ -35,8 +34,6 @@ public class CopDealDamage : MonoBehaviour
 	}
 
 
-
-
 	//------------------------
 	//---- Little Methods ----
 	//------------------------
@@ -58,7 +55,7 @@ public class CopDealDamage : MonoBehaviour
 
 	private bool isDonutInFrontOfCop()
 	{
-		if (donutInFrontOfCop != null)
+		if (donutInFrontOfCop != null) // if donutInFrontOfCop is not null, that means there is a donut in front of the cop
 		{
 			return true;
 		}
