@@ -8,7 +8,7 @@ public class SetCursor : MonoBehaviour
 	private GameObject donut;
 	private GameObject cursorManager;
 
-	private Texture2D cursorTexture;
+	public Texture2D cursorTexture;
 	private Vector2 hotSpot = Vector2.zero;
 	private CursorMode cursorMode = CursorMode.Auto;
 
@@ -16,7 +16,6 @@ public class SetCursor : MonoBehaviour
 	{
 		cursorManager = GameObject.Find("Cursor Manager");
 		donut = transform.parent.gameObject;
-		cursorTexture = GetComponentInParent<Image>().sprite.texture;
 	}
 	
 	void Update()
@@ -26,7 +25,11 @@ public class SetCursor : MonoBehaviour
 
 	public void OnClick()
 	{
-		if (donut.GetComponent<CheckDonutAvailableForPurchase>().donutAvialable)
+		if (cursorManager.GetComponent<CursorManager>().cursorChanged == true)
+		{
+			cursorManager.GetComponent<CursorManager>().setCursorToDefault();
+		}
+		else if (donut.GetComponent<CheckDonutAvailableForPurchase>().donutAvialable)
 		{
 			Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
 

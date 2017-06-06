@@ -104,8 +104,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1892f7f3213b6ff4995fe5bc604fb624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  donutPrefab: {fileID: 1680318512101964, guid: ca535a58adb56e047ac386e4be5a3803,
+  donutCurrency: {fileID: 1955764907543326, guid: 9b2b3be7bd50ab74ba925423b78b2eae,
     type: 2}
+  donutStandard: {fileID: 1847287486393252, guid: ca535a58adb56e047ac386e4be5a3803,
+    type: 2}
+  donutSlowing: {fileID: 1853980730716076, guid: dfbb68a9e2c332b4f87486deaac9a29a,
+    type: 2}
+  donutTank: {fileID: 1018975535500768, guid: 9b73f38f3846a374d836ef91e95aaef9, type: 2}
 --- !u!212 &212620996196365506
 SpriteRenderer:
   m_ObjectHideFlags: 1
