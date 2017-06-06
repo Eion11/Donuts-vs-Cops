@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 4820
+  controlID: 198
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 4821
+  controlID: 199
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -434,9 +434,9 @@ MonoBehaviour:
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 81}
-    m_SelectedIDs: 88280000
-    m_LastClickedID: 10376
-    m_ExpandedIDs: 00000000f825000050260000a0260000a6260000182700002e270000b22700008228000088280000f0280000f2280000622d000000ca9a3bffffff7f
+    m_SelectedIDs: aa280000
+    m_LastClickedID: 10410
+    m_ExpandedIDs: 000000001a26000072260000c2260000c82600003a27000050270000d4270000a4280000aa2800001229000014290000882d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -464,7 +464,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f825000050260000a0260000a6260000182700002e270000b22700008228000088280000f0280000f2280000622d000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000001a26000072260000c2260000c82600003a27000050270000d4270000a4280000aa2800001229000014290000882d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -573,9 +573,9 @@ MonoBehaviour:
     height: 710
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e2a0000
-    m_LastClickedID: 10862
-    m_ExpandedIDs: 709effffb69effff089fffffeef6ffffe8fbffff00000000e8290000102a00002e2a00006e2a0000482b0000fc2b0000aa2c0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: aefbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -624,7 +624,7 @@ MonoBehaviour:
     y: 92
     width: 275
     height: 710
-  m_ScrollPosition: {x: 0, y: 502.95508}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 194
