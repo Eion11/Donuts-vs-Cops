@@ -7,26 +7,12 @@ public class UIManager : MonoBehaviour
 {
 	
 	GameObject[] pauseObjects;
-	GameObject[] confermationObjects;
-	GameObject[] mainMenuObjects;
 	bool paused = false;
-
-	private enum enQuery 
-	{
-		Restart, Exit, MainMenu
-	};
-
-	private enQuery enCurrent;
-
-
 	void Start () 
 	{
 		Time.timeScale = 1;
 		pauseObjects = GameObject.FindGameObjectsWithTag ("ShowOnPause");
-		confermationObjects = GameObject.FindGameObjectsWithTag ("ShowOnConfermation");
-		mainMenuObjects = GameObject.FindGameObjectsWithTag ("ShowOnMainMenu");
 		hidePaused ();
-		hideConfermation ();
 	}
 	
 	// Update is called once per frame
@@ -48,60 +34,10 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
-	public void SetQueryToRestart()
-	{
-		enCurrent = enQuery.Restart;
-	}
-
-	public void SetQueryToMainMenu()
-	{
-		enCurrent = enQuery.MainMenu;
-	}
-
-	public void SetQueryToExit()
-	{
-		enCurrent = enQuery.Exit;
-	}
-
-	public void ExecuteCurrentQuery()
-	{
-		if (enCurrent == enQuery.Restart)
-		{
-			Reload ();
-		}
-		else if (enCurrent == enQuery.MainMenu)
-		{
-			LoadMainMenu ();
-		}
-		else if (enCurrent == enQuery.Exit)
-		{
-			
-		}
-	}
-
-	public void ToggleConfermationOn()
-	{
-		hidePaused ();
-		hideMainMenu ();
-		showConfermation ();
-	}
-
-	public void ToggleConfermationOff()
-	{
-		hideConfermation ();
-		showMainMenu ();
-		showPaused ();
-	}
-
-	private void Reload()
+	public void Reload()
 	{
 		Scene scene = SceneManager.GetActiveScene();
 		SceneManager.LoadScene (scene.name);
-	}
-
-	private void Exit()
-	{
-		Application.Quit ();
 	}
 
 	//controls the pausing of the scene
@@ -138,43 +74,7 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
-	//shows objects with ShowOnMainMenu tag
-	public void showMainMenu()
-	{
-		foreach(GameObject g in mainMenuObjects)
-		{
-			g.SetActive(true);
-		}
-	}
-
-	//hides objects with ShowOnMainMenu tag
-	public void hideMainMenu()
-	{
-		foreach(GameObject g in mainMenuObjects)
-		{
-			g.SetActive(false);
-		}
-	}
-
-	//shows objects with ShowOnConfermation tag
-	public void showConfermation()
-	{
-		foreach(GameObject g in confermationObjects)
-		{
-			g.SetActive (true);
-		}
-	}
-
-	//hides objects with ShowOnConfermation tag
-	public void hideConfermation()
-	{
-		foreach(GameObject g in confermationObjects)
-		{
-			g.SetActive (false);
-		}
-	}
-
-	private void LoadMainMenu()
+	public void LoadMainMenu()
 	{
 		LoadLevel ("Main Menu");
 	}

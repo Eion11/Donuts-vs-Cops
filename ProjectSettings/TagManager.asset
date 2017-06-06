@@ -13,8 +13,6 @@ TagManager:
   - WinCondition
   - ShowOnPause
   - UIManager
-  - ShowOnConfermation
-  - ShowOnMainMenu
   layers:
   - Default
   - TransparentFX
@@ -24,7 +22,7 @@ TagManager:
   - UI
   - 
   - 
-  - UI Text
+  - 
   - 
   - 
   - 
