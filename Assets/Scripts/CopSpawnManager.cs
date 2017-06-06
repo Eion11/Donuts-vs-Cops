@@ -27,6 +27,7 @@ public class CopSpawnManager : MonoBehaviour
         {
             for (int i = 0; i < copCount; i++)
             {
+                int lane = Random.Range(1, 5);
                 Vector3 spawnPosition = new Vector3(8, Random.Range(Lane1, Lane5), 0); //2.35f Top lane
                 Instantiate(Cop_Standard, spawnPosition, Quaternion.identity);
                 yield return new WaitForSeconds(spawnWait);
