@@ -849,6 +849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085cf29e43ebfd84d9b24ad2f92d488d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: a758811300635cb468ee4dc64f6bfdc0, type: 3}
 --- !u!1 &382741925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,6 +2078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085cf29e43ebfd84d9b24ad2f92d488d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: eaf6e882824b38e4e83ec54c5663431a, type: 3}
 --- !u!1001 &764095891
 Prefab:
   m_ObjectHideFlags: 0
@@ -4333,6 +4335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085cf29e43ebfd84d9b24ad2f92d488d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 569488ea51094234599e320f19b5242a, type: 3}
 --- !u!1 &1570819578
 GameObject:
   m_ObjectHideFlags: 0
@@ -4378,6 +4381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085cf29e43ebfd84d9b24ad2f92d488d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 2ecb484d71d4f004bb80912f047fcec4, type: 3}
 --- !u!1 &1577212819
 GameObject:
   m_ObjectHideFlags: 0
