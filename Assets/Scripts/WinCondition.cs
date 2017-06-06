@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WinCondition : MonoBehaviour
 {
-	public int copKillVictoy;	// the amount of cops you need to kill to win the game --set in inspector--
+	private int copKillVictory;	// the amount of cops you need to kill to win the game --set in inspector--
 	public int copsKilled;      // this will keep track of how many cops have been killed so far
 
 	public int copDefeat;		// the amount of cops that are aloud to get through before you lose --set in inspector--
@@ -48,7 +48,7 @@ public class WinCondition : MonoBehaviour
 	bool checkPlayerWin()
 	{
 		// if the amount of cops killed is greater then the amount required for victory, return true to win the game
-		if (copsKilled >= copKillVictoy)
+		if (copsKilled >= copKillVictory)
 		{
 			return true;
 		}
@@ -64,4 +64,9 @@ public class WinCondition : MonoBehaviour
 		}
 		return false;
 	}
+
+    public void setCopKillVictory(int NumberOfCops)
+    {
+        this.copKillVictory = NumberOfCops;
+    }
 }
