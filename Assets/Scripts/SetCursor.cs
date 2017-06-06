@@ -25,7 +25,11 @@ public class SetCursor : MonoBehaviour
 
 	public void OnClick()
 	{
-		if (donut.GetComponent<CheckDonutAvailableForPurchase>().donutAvialable)
+		if (cursorManager.GetComponent<CursorManager>().cursorChanged == true)
+		{
+			cursorManager.GetComponent<CursorManager>().setCursorToDefault();
+		}
+		else if (donut.GetComponent<CheckDonutAvailableForPurchase>().donutAvialable)
 		{
 			Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
 
