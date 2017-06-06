@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class SetCursor : MonoBehaviour
 {
 	private GameObject donut;
@@ -12,10 +13,12 @@ public class SetCursor : MonoBehaviour
 	private Vector2 hotSpot = Vector2.zero;
 	private CursorMode cursorMode = CursorMode.Auto;
 
+
 	void Start()
 	{
 		cursorManager = GameObject.Find("Cursor Manager");
 		donut = transform.parent.gameObject;
+
 	}
 	
 	void Update()
@@ -32,5 +35,8 @@ public class SetCursor : MonoBehaviour
 			cursorManager.GetComponent<CursorManager>().cursorChanged = true;
 			cursorManager.GetComponent<CursorManager>().selectedDonutName = transform.parent.name;
 		}
-	}	
+	}
+
+
+
 }
