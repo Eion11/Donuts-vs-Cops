@@ -64,7 +64,7 @@ public class Death : MonoBehaviour
 	private void removeDonut()
 	{
 		// tell the tile the donut was placed on is empty so that another donut can be placed here again
-		string tileName = GetComponent<DonutTilePlacement>().getTileNameString();
+		string tileName = GetComponent<LanePlacement>().getTileNameString();
 
 		GameObject tile = GameObject.Find(tileName);
 		tile.GetComponent<TileProperties>().donutOnTile = false;
@@ -74,6 +74,8 @@ public class Death : MonoBehaviour
 	private void destroyCop()
 	{
 		// increase the win condition by 1 so the game knows when the game will be won
+		GetComponent<LanePlacement>().lane.GetComponent<DetectCopInLane>().copsInLane--;
+		Debug.Log("Cops In Lane: " + GetComponent<LanePlacement>().lane.GetComponent<DetectCopInLane>().copsInLane);
 		winCondition.GetComponent<WinCondition>().copsKilled += 1;
 	}
 
@@ -84,7 +86,6 @@ public class Death : MonoBehaviour
 	{
 		if (isColliderIsACop(collider))
 		{
-			Debug.Log("Add: " + collider);
 			copsAttackingThisDonut[copConuter++] = collider;
 		}
 	}

@@ -470,6 +470,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 456125112}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -560,6 +565,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 456125112}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -611,6 +621,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 456125112}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -1006,6 +1021,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 456125112}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -1205,7 +1225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onCooldown: 0
   timeStamp: 0
-  cooldownTime: 7
+  cooldownTime: 1
 --- !u!4 &384929672 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4570686164115690, guid: 35b2d50c419a48a4fa85ea40031e12ab,
@@ -1388,6 +1408,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1552840967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -1434,6 +1459,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1146324200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -1574,7 +1604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onCooldown: 0
   timeStamp: 0
-  cooldownTime: 7
+  cooldownTime: 1
 --- !u!114 &437728168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1716,6 +1746,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1146324200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -1750,6 +1785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   copActive: 0
+  copsInLane: 0
 --- !u!23 &456125114
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1936,6 +1972,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1228354009}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -2066,6 +2107,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 2045479942}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -2209,7 +2255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onCooldown: 0
   timeStamp: 0
-  cooldownTime: 7
+  cooldownTime: 1
 --- !u!114 &550867376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2351,6 +2397,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1228354009}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -2407,6 +2458,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 2045479942}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -2463,6 +2519,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 2045479942}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -3085,6 +3146,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1146324200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -3131,6 +3197,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1552840967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -3835,6 +3906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   copActive: 0
+  copsInLane: 0
 --- !u!23 &1146324202
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4054,6 +4126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   copActive: 0
+  copsInLane: 0
 --- !u!23 &1228354011
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4369,6 +4442,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1146324200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -4568,6 +4646,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1552840967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -4614,6 +4697,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1552840967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -4739,6 +4827,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1228354009}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -4983,6 +5076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   copActive: 0
+  copsInLane: 0
 --- !u!23 &1552840969
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5135,6 +5229,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1552840967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -5230,7 +5329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015aaf4aa7e61ff4ca51fc0c38488b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: 200
+  currency: 1500
 --- !u!114 &1577212822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5318,6 +5417,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1228354009}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -5473,6 +5577,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1228354009}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -5850,6 +5959,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 456125112}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -5975,6 +6089,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1552840967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -6031,7 +6150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onCooldown: 0
   timeStamp: 0
-  cooldownTime: 7
+  cooldownTime: 1
 --- !u!114 &1791341247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6363,6 +6482,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1228354009}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -7284,6 +7408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   copActive: 0
+  copsInLane: 0
 --- !u!23 &2045479944
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7466,6 +7591,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 2045479942}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -7604,6 +7734,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1146324200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -8003,6 +8138,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 2045479942}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
