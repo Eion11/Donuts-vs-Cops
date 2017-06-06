@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿
 using UnityEngine;
-using UnityEngine.UI;
 
 public class OnClickSpawnDonut : MonoBehaviour
 {
-	public Object donutPrefab;   // the prefab that will be used to instansiate from
+	public GameObject donutCurrency, donutStandard, donutSlowing, donutTank;
+
 	private GameObject donutClone;           // the donut that the prefab will be instansiated into
 	private GameObject cursorManager;
 	private GameObject playerCurrency;
@@ -41,9 +39,25 @@ public class OnClickSpawnDonut : MonoBehaviour
 
 	private void PlaceTower()
 	{
+		string donutName = cursorManager.GetComponent<CursorManager>().selectedDonutName;
+		Debug.Log(donutName);
 		// Create the donut
-		donutPrefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/" + cursorManager.GetComponent<CursorManager>().selectedDonutName + ".prefab", typeof(GameObject));
-		donutClone = Instantiate(donutPrefab, transform.position, Quaternion.identity) as GameObject;
+		if (donutName.Equals("Donut_Currency"))
+		{
+			donutClone = Instantiate(donutCurrency, transform.position, Quaternion.identity) as GameObject;
+		}
+		else if (donutName.Equals("Donut_Standard"))
+		{
+			donutClone = Instantiate(donutStandard, transform.position, Quaternion.identity) as GameObject;
+		}
+		else if (donutName.Equals("Donut_Slowing"))
+		{
+			donutClone = Instantiate(donutSlowing, transform.position, Quaternion.identity) as GameObject;
+		}
+		else if (donutName.Equals("Donut_Tank"))
+		{
+			donutClone = Instantiate(donutTank, transform.position, Quaternion.identity) as GameObject;
+		}
 
 		// Set some propities of the donut so it knows its name and place
 		donutClone.GetComponent<LanePlacement>().setTileNameString(this.transform.name);

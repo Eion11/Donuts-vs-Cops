@@ -18,28 +18,31 @@ public class Movement : MonoBehaviour
 		setMoveSpeedToDefault();
 		winCondition = GameObject.Find("WinCondition");
 
+		StartCoroutine("updatePosition", 0);
 		InvokeRepeating("checkIfMaxXReached", 0, 0.1f);
 
+		
+	}
+
+	IEnumerator updatePosition()
+	{
 		manager = GameObject.Find("UIManager");
-	}
 
-	void Update()
-	{
-		if (!(manager.GetComponent<UIManager>().getPausedState()))
+		while (true)
 		{
-			updatePosition ();
-		}
-	}
+			if (!(manager.GetComponent<UIManager>().getPausedState()))
+			{
+				if (movementDirection == MovementDirection.MOVING_RIGHT)
+				{
+					moveObjectRight();
+				}
+				else if (movementDirection == MovementDirection.MOVING_LEFT)
+				{
+					moveObjectLeft();
+				}
+			}
 
-	private void updatePosition()
-	{
-		if (movementDirection == MovementDirection.MOVING_RIGHT)
-		{
-			moveObjectRight();
-		}
-		else if (movementDirection == MovementDirection.MOVING_LEFT)
-		{
-			moveObjectLeft();
+			yield return new WaitForSeconds(0.01f);
 		}
 	}
 
