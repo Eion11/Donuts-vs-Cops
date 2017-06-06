@@ -6,7 +6,6 @@ public class ProduceProjectile : MonoBehaviour
 {
 	public float projectileFireRate;
 	public GameObject projectilePrefab;
-	private GameObject projectileClone;
 	private GameObject lane;
 	private bool startedShooting = false;
 
@@ -33,6 +32,6 @@ public class ProduceProjectile : MonoBehaviour
 
 	private void createProjectile()
 	{
-		projectileClone = Instantiate(projectilePrefab, transform.position, Quaternion.identity) as GameObject;
+		Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 	}
 }
