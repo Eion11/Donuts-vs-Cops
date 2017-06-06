@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour 
 {
@@ -35,9 +36,8 @@ public class UIManager : MonoBehaviour
 
 	public void Reload()
 	{
-		//put load level code here
-		//SceneManager.LoadScene()....
-		//SceneManager is a built in Unity class.
+		Scene scene = SceneManager.GetActiveScene();
+		SceneManager.LoadScene (scene.name);
 	}
 
 	//controls the pausing of the scene
@@ -74,10 +74,15 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
+	public void LoadMainMenu()
+	{
+		LoadLevel ("Main Menu");
+	}
+
 	//loads inputted level
 	public void LoadLevel(string levelName)
 	{
-		Application.LoadLevel (levelName);
+		SceneManager.LoadScene (levelName);
 	}
 
 	public bool getPausedState()

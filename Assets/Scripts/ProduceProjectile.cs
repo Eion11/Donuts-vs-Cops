@@ -6,33 +6,30 @@ public class ProduceProjectile : MonoBehaviour
 {
 	public float projectileFireRate;
 	public GameObject projectilePrefab;
-	private GameObject projectileClone;
 	private GameObject lane;
 	private bool startedShooting = false;
 
-	// Use this for initialization
 	void Start()
 	{
-		lane = GetComponent<DonutTilePlacement>().lane;
+		lane = GetComponent<LanePlacement>().lane;
 	}
 	
-	// Update is called once per frame
 	void Update()
 	{
-		if (lane.GetComponent<DetectCopInLane>().copActive == true && startedShooting == false)
+		if (lane.GetComponent<DetectCopInLane>().copsInLane > 0 && startedShooting == false)
 		{
 			InvokeRepeating("createProjectile", 0, projectileFireRate);
 			startedShooting = true;
 		}
-		else if (lane.GetComponent<DetectCopInLane>().copActive == false)
+		else if (lane.GetComponent<DetectCopInLane>().copsInLane == 0)
 		{
-			CancelInvoke();
+			CancelInvoke("createProjectile");
 			startedShooting = false;
 		}
 	}
 
 	private void createProjectile()
 	{
-		projectileClone = Instantiate(projectilePrefab, transform.position, Quaternion.identity) as GameObject;
+		Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 	}
 }

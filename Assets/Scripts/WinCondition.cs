@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class WinCondition : MonoBehaviour
 {
-	public int copKillVictoy = 3;	// the amount of cops you need to kill to win the game --set in inspector--
-	public int copsKilled = 0;      // this will keep track of how many cops have been killed so far
+	public int copKillVictoy;	// the amount of cops you need to kill to win the game --set in inspector--
+	public int copsKilled;      // this will keep track of how many cops have been killed so far
 
-	public int copDefeat = 3;		// the amount of cops that are aloud to get through before you lose --set in inspector--
-	public int copsPassed = 0;		// this will keep track of how many cops have reached the end
+	public int copDefeat;		// the amount of cops that are aloud to get through before you lose --set in inspector--
+	public int copsPassed;		// this will keep track of how many cops have reached the end
 
 	private GameObject winLoseText;	// the object that holds the text that comes on the screen that says victory or defeat
 
@@ -30,17 +30,17 @@ public class WinCondition : MonoBehaviour
 
 	private void checkIfThePlayerHasWonOrLost()
 	{
-		if (checkPlayerWin())
-		{
-			winLoseText.GetComponent<Text>().text = "VICTORY";
-			winLoseText.GetComponent<Text>().color = new Color(0, 255, 0);
-			Time.timeScale = 0;
-		}
-		else if (checkPlayerLose())
+		if (checkPlayerLose())
 		{
 			winLoseText.GetComponent<Text>().text = "DEFEAT";
 			winLoseText.GetComponent<Text>().color = new Color(255, 0, 0);
 
+			Time.timeScale = 0;
+		}
+		else if (checkPlayerWin())
+		{
+			winLoseText.GetComponent<Text>().text = "VICTORY";
+			winLoseText.GetComponent<Text>().color = new Color(0, 255, 0);
 			Time.timeScale = 0;
 		}
 	}

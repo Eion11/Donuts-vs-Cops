@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class CopDealDamage : MonoBehaviour
@@ -9,7 +8,7 @@ public class CopDealDamage : MonoBehaviour
 
 	void Start()
 	{
-		InvokeRepeating("dealDamageToDonut", 0.5f, 0.5f);
+		InvokeRepeating("dealDamageToDonut", 0.5f, 0.5f);	// repeadetly call this method every x seconds
 	}
 
 	void Update()
@@ -19,7 +18,7 @@ public class CopDealDamage : MonoBehaviour
 
 	void OnTriggerEnter(Collider collider)
 	{
-		if (isObjectADonut(collider))
+		if (isColliderADonut(collider))
 		{
 			donutInFrontOfCop = collider;
 			setCopMovement(CopMoveState.STOPPED);
@@ -31,15 +30,8 @@ public class CopDealDamage : MonoBehaviour
 		if (isDonutInFrontOfCop())
 		{
 			damageDonut();
-
-			if (checkIfDonutIsDead())
-			{
-				setCopMovement(CopMoveState.MOVING);
-			}
 		}
 	}
-
-
 
 
 	//------------------------
@@ -51,26 +43,22 @@ public class CopDealDamage : MonoBehaviour
 		donutInFrontOfCop.gameObject.GetComponent<Health>().takeDamage(damageAmount);
 	}
 
-	private bool checkIfDonutIsDead()
-	{
-		if (donutInFrontOfCop.GetComponent<Health>().currentHealth <= 0)
-			return true;
-
-		return false;
-	}
-
-	private bool isObjectADonut(Collider obj)
+	private bool isColliderADonut(Collider obj)
 	{
 		if (obj.gameObject.tag == "Donut")
+		{
 			return true;
+		}
 
 		return false;
 	}
 
 	private bool isDonutInFrontOfCop()
 	{
-		if (donutInFrontOfCop != null)
+		if (donutInFrontOfCop != null) // if donutInFrontOfCop is not null, that means there is a donut in front of the cop
+		{
 			return true;
+		}
 
 		return false;
 	}

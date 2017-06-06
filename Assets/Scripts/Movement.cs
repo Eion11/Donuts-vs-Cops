@@ -11,34 +11,38 @@ public class Movement : MonoBehaviour
 	private float xMoveSpeed;                   // the move speed of the object
 	private GameObject winCondition;            // used to update victory condition (when cops reach deathX, defeat+1)
 	private GameObject manager;
+
 	void Start()
 	{
 		xMoveSpeedDefault /= 1000;
 		setMoveSpeedToDefault();
 		winCondition = GameObject.Find("WinCondition");
 
+		StartCoroutine("updatePosition", 0);
 		InvokeRepeating("checkIfMaxXReached", 0, 0.1f);
 
+		
+	}
+
+	IEnumerator updatePosition()
+	{
 		manager = GameObject.Find("UIManager");
-	}
 
-	void Update()
-	{
-		if (!(manager.GetComponent<UIManager>().getPausedState()))
+		while (true)
 		{
-			updatePosition ();
-		}
-	}
+			if (!(manager.GetComponent<UIManager>().getPausedState()))
+			{
+				if (movementDirection == MovementDirection.MOVING_RIGHT)
+				{
+					moveObjectRight();
+				}
+				else if (movementDirection == MovementDirection.MOVING_LEFT)
+				{
+					moveObjectLeft();
+				}
+			}
 
-	private void updatePosition()
-	{
-		if (movementDirection == MovementDirection.MOVING_RIGHT)
-		{
-			moveObjectRight();
-		}
-		else if (movementDirection == MovementDirection.MOVING_LEFT)
-		{
-			moveObjectLeft();
+			yield return new WaitForSeconds(0.01f);
 		}
 	}
 
@@ -62,11 +66,17 @@ public class Movement : MonoBehaviour
 
 	public void slowMovementSpeedTemporarily(float percentage, float seconds)
 	{
-		xMoveSpeed = xMoveSpeedDefault * (percentage / 100);
-		Debug.Log("Slow Temp... " + xMoveSpeed);
+		if (xMoveSpeed != 0)
+		{
+			xMoveSpeed = xMoveSpeedDefault * (percentage / 100);
 
-		CancelInvoke();
-		Invoke("setMoveSpeedToDefault", seconds);
+			CancelInvoke("setMoveSpeedToDefault");
+			Invoke("setMoveSpeedToDefault", seconds);
+		}
+		else
+		{
+			CancelInvoke("setMoveSpeedToDefault");
+		}
 	}
 
 

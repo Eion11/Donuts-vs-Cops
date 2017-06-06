@@ -470,6 +470,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 456125112}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -502,7 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   copKillVictoy: 28
   copsKilled: 0
-  copDefeat: 3
+  copDefeat: 1
   copsPassed: 0
 --- !u!4 &195312527
 Transform:
@@ -560,6 +565,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 456125112}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -611,6 +621,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 456125112}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -1006,6 +1021,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 456125112}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -1054,6 +1074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085cf29e43ebfd84d9b24ad2f92d488d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: a758811300635cb468ee4dc64f6bfdc0, type: 3}
 --- !u!1 &382741925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,7 +1226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onCooldown: 0
   timeStamp: 0
-  cooldownTime: 7
+  cooldownTime: 1
 --- !u!4 &384929672 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4570686164115690, guid: 35b2d50c419a48a4fa85ea40031e12ab,
@@ -1340,7 +1361,6 @@ Transform:
   - {fileID: 88141330}
   - {fileID: 903882804}
   - {fileID: 1545933315}
-  - {fileID: 745647211}
   - {fileID: 9830610}
   - {fileID: 1041954517}
   m_Father: {fileID: 0}
@@ -1389,6 +1409,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1552840967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -1435,6 +1460,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1146324200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -1575,7 +1605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onCooldown: 0
   timeStamp: 0
-  cooldownTime: 7
+  cooldownTime: 1
 --- !u!114 &437728168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,6 +1747,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1146324200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -1751,6 +1786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   copActive: 0
+  copsInLane: 0
 --- !u!23 &456125114
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1937,6 +1973,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1228354009}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -2067,6 +2108,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 2045479942}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -2117,7 +2163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655a0d95e99e3224e9ca62da9cf863d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  donutCost: 75
+  donutCost: 50
 --- !u!114 &541674047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2210,7 +2256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onCooldown: 0
   timeStamp: 0
-  cooldownTime: 7
+  cooldownTime: 1
 --- !u!114 &550867376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2352,52 +2398,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (16)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &601382111
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 405401000}
-    m_Modifications:
-    - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 6.9180627
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.20409602
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
-      propertyPath: m_RootOrder
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1481149999998058, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
-      propertyPath: m_Name
-      value: Cop (2)
-      objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1228354009}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -2454,6 +2459,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 2045479942}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -2510,6 +2520,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 2045479942}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -2753,11 +2768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085cf29e43ebfd84d9b24ad2f92d488d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &745647211 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47,
-    type: 2}
-  m_PrefabInternal: {fileID: 601382111}
+  cursorTexture: {fileID: 2800000, guid: eaf6e882824b38e4e83ec54c5663431a, type: 3}
 --- !u!1001 &764095891
 Prefab:
   m_ObjectHideFlags: 0
@@ -3137,6 +3148,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1146324200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -3183,6 +3199,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1552840967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -3887,6 +3908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   copActive: 0
+  copsInLane: 0
 --- !u!23 &1146324202
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4106,6 +4128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   copActive: 0
+  copsInLane: 0
 --- !u!23 &1228354011
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4421,6 +4444,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1146324200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -4620,6 +4648,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1552840967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -4666,6 +4699,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1552840967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -4791,6 +4829,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1228354009}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -4952,7 +4995,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1530296040}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1222506771}
+        m_MethodName: Reload
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1530296040
@@ -5024,6 +5078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   copActive: 0
+  copsInLane: 0
 --- !u!23 &1552840969
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5133,6 +5188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085cf29e43ebfd84d9b24ad2f92d488d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 569488ea51094234599e320f19b5242a, type: 3}
 --- !u!1001 &1569784060
 Prefab:
   m_ObjectHideFlags: 0
@@ -5176,6 +5232,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1552840967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -5224,6 +5285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085cf29e43ebfd84d9b24ad2f92d488d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 2ecb484d71d4f004bb80912f047fcec4, type: 3}
 --- !u!1 &1577212819
 GameObject:
   m_ObjectHideFlags: 0
@@ -5271,7 +5333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015aaf4aa7e61ff4ca51fc0c38488b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: 200
+  currency: 1500
 --- !u!114 &1577212822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5353,12 +5415,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1481149999998058, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
       propertyPath: m_Name
       value: Cop (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1228354009}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -5514,6 +5581,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1228354009}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -5891,6 +5963,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 456125112}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -6016,6 +6093,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1552840967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -6072,7 +6154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onCooldown: 0
   timeStamp: 0
-  cooldownTime: 7
+  cooldownTime: 1
 --- !u!114 &1791341247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6404,6 +6486,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1228354009}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -7110,7 +7197,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1964024042}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1222506771}
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1964024042
@@ -7314,6 +7412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   copActive: 0
+  copsInLane: 0
 --- !u!23 &2045479944
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7494,8 +7593,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4464508745536878, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
       propertyPath: m_RootOrder
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 2045479942}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -7634,6 +7738,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 1146324200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
@@ -8033,6 +8142,11 @@ Prefab:
       propertyPath: m_Name
       value: Cop (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 114834199846498694, guid: b9ec661db35fc5b4e8ae087073f6ba47,
+        type: 2}
+      propertyPath: lane
+      value: 
+      objectReference: {fileID: 2045479942}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9ec661db35fc5b4e8ae087073f6ba47, type: 2}
   m_IsPrefabParent: 0
