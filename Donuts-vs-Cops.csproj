@@ -96,9 +96,11 @@
     <Compile Include="Assets\Scripts\ProjectileSlowOnHit.cs" />
     <Compile Include="Assets\Scripts\SetCursor.cs" />
     <Compile Include="Assets\Scripts\SetTileTransparency.cs" />
+    <Compile Include="Assets\Scripts\ShowToolTip.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\CopsMove.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\CopsTakeDamage.cs" />
     <Compile Include="Assets\Scripts\TileProperties.cs" />
+    <Compile Include="Assets\Scripts\ToggleSound.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\WinCondition.cs" />
     <Compile Include="Assets\UnityTestTools\Assertions\AssertionComponent.cs" />
