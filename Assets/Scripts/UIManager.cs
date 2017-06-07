@@ -75,7 +75,7 @@ public class UIManager : MonoBehaviour
 		}
 		else if (enCurrent == enQuery.Exit)
 		{
-			
+			Application.Quit ();
 		}
 	}
 

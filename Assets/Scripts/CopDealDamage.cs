@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class CopDealDamage : MonoBehaviour
 {
-	public double damageAmount = 0;		// the amount of damage the cop will do - set this in the inspector
+	public double damageAmount;    // the amount of damage the cop will do - set this in the inspector
+	public float attackSpeed;
 	private Collider donutInFrontOfCop; // the donut that will be in front of the cop (null if there is no donut)
 
 	void Start()
 	{
-		InvokeRepeating("dealDamageToDonut", 0.5f, 0.5f);	// repeadetly call this method every x seconds
+		InvokeRepeating("dealDamageToDonut", 0.5f, attackSpeed);	// repeadetly call this method every x seconds
 	}
 
 	void Update()
@@ -30,6 +31,7 @@ public class CopDealDamage : MonoBehaviour
 		if (isDonutInFrontOfCop())
 		{
 			damageDonut();
+			this.gameObject.GetComponent<AudioSource> ().Play ();
 		}
 	}
 
