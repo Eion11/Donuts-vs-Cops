@@ -89,11 +89,4 @@ public class UIManager : MonoBehaviour
 	{
 		return paused;
 	}
-
-	public void ExitGame()
-	{
-		Debug.Log ("trying to quit");
-		Application.Quit ();
-
-	}
 }
