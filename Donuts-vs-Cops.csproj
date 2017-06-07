@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CheckDonutAvailableForPurchase.cs" />
     <Compile Include="Assets\Scripts\CopDealDamage.cs" />
+    <Compile Include="Assets\Scripts\CopSpawnManager.cs" />
     <Compile Include="Assets\Scripts\CursorManager.cs" />
     <Compile Include="Assets\Scripts\Death.cs" />
     <Compile Include="Assets\Scripts\DetectCopInLane.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\Scripts\GenerateCurrency.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\LanePlacement.cs" />
+    <Compile Include="Assets\Scripts\LanePosition.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\OnClickSpawnDonut.cs" />
     <Compile Include="Assets\Scripts\PlayerCurrency.cs" />

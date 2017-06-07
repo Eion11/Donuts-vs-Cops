@@ -15,6 +15,7 @@ TagManager:
   - UIManager
   - ShowOnConfermation
   - ShowOnMainMenu
+  - Lane
   layers:
   - Default
   - TransparentFX
