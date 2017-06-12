@@ -11,8 +11,7 @@ public class WinCondition : MonoBehaviour
 	public int copDefeat;		// the amount of cops that are aloud to get through before you lose --set in inspector--
 	public int copsPassed;		// this will keep track of how many cops have reached the end
 
-	private GameObject winLoseText;	// the object that holds the text that comes on the screen that says victory or defeat
-
+	private GameObject winLoseText; // the object that holds the text that comes on the screen that says victory or defeat
 	// Use this for initialization
 	void Start()
 	{
@@ -41,7 +40,9 @@ public class WinCondition : MonoBehaviour
 		{
 			winLoseText.GetComponent<Text>().text = "VICTORY";
 			winLoseText.GetComponent<Text>().color = new Color(0, 255, 0);
-			Time.timeScale = 0;
+			//Time.timeScale = 0;
+			GameObject uiManager = GameObject.Find("UIManager");
+			uiManager.GetComponent<UIManager>().showVictoryOptions();
 		}
 	}
 

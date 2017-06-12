@@ -68,20 +68,27 @@ public class Death : MonoBehaviour
 
 		GameObject tile = GameObject.Find(tileName);
 		tile.GetComponent<TileProperties>().donutOnTile = false;
+
 		makeAllCopAttackingThisDonutMoveAgain();
 	}
 
 	private void destroyCop()
 	{
-		// increase the win condition by 1 so the game knows when the game will be won
-		GetComponent<LanePlacement>().lane.GetComponent<DetectCopInLane>().copsInLane--;
-		Debug.Log("Cops In Lane: " + GetComponent<LanePlacement>().lane.GetComponent<DetectCopInLane>().copsInLane);
+		if (transform.name.Equals("Boss_Cop(Clone)"))
+		{
+			GetComponent<LanePlacement>().lane.GetComponent<DetectCopInLane>().copsInLane--;
+			GetComponent<LanePlacement>().lane2.GetComponent<DetectCopInLane>().copsInLane--;
+			GetComponent<LanePlacement>().lane3.GetComponent<DetectCopInLane>().copsInLane--;
+			GetComponent<LanePlacement>().lane4.GetComponent<DetectCopInLane>().copsInLane--;
+			GetComponent<LanePlacement>().lane5.GetComponent<DetectCopInLane>().copsInLane--;
+		}
+		else
+		{
+			GetComponent<LanePlacement>().lane.GetComponent<DetectCopInLane>().copsInLane--;
+		}
 		winCondition.GetComponent<WinCondition>().copsKilled += 1;
 	}
-
-
-
-
+	
 	void OnTriggerEnter(Collider collider)
 	{
 		if (isColliderIsACop(collider))
@@ -96,8 +103,12 @@ public class Death : MonoBehaviour
 		{
 			if (copsAttackingThisDonut[cop] != null)
 			{
-				Debug.Log("Move again: " + copsAttackingThisDonut[cop]);
-				copsAttackingThisDonut[cop].gameObject.GetComponent<Movement>().setMoveSpeedToDefault();
+				copsAttackingThisDonut[cop].gameObject.GetComponent<CopDealDamage>().copKilledDonut();
+
+				if (copsAttackingThisDonut[cop].gameObject.GetComponent<CopDealDamage>().getDonutsThisCopIsAttacking() <= 0)
+				{
+					copsAttackingThisDonut[cop].gameObject.GetComponent<Movement>().setMoveSpeedToDefault();
+				}
 			}
 		}
 
@@ -108,6 +119,16 @@ public class Death : MonoBehaviour
 	private bool isColliderIsACop(Collider obj)
 	{
 		if (obj.gameObject.tag == "Cop")
+		{
+			return true;
+		}
+
+		return false;
+	}
+
+	private bool isColliderIsADonut(Collider obj)
+	{
+		if (obj.gameObject.tag == "Donut")
 		{
 			return true;
 		}

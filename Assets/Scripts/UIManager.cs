@@ -9,7 +9,12 @@ public class UIManager : MonoBehaviour
 	GameObject[] pauseObjects;
 	GameObject[] confermationObjects;
 	GameObject[] mainMenuObjects;
+	GameObject[] helpPanelObjects;
+	GameObject[] victoryObjects;
+
 	bool paused = false;
+
+	GameObject cursor;
 
 	private enum enQuery 
 	{
@@ -25,14 +30,19 @@ public class UIManager : MonoBehaviour
 		pauseObjects = GameObject.FindGameObjectsWithTag ("ShowOnPause");
 		confermationObjects = GameObject.FindGameObjectsWithTag ("ShowOnConfermation");
 		mainMenuObjects = GameObject.FindGameObjectsWithTag ("ShowOnMainMenu");
+		helpPanelObjects = GameObject.FindGameObjectsWithTag("ShowHelpPanel");
+		victoryObjects = GameObject.FindGameObjectsWithTag("ShowOnVictory");
+		hideHelpPanel();
 		hidePaused ();
-		hideConfermation ();
+		hideConfermation();
+		hideVictoryOptions();
+
+		cursor = GameObject.Find("Cursor Manager");
 	}
-	
+
 	// Update is called once per frame
 	void Update () 
 	{
-
 		if (Input.GetKeyDown (KeyCode.Escape)) 
 		{
 			if (Time.timeScale == 1) {
@@ -109,6 +119,7 @@ public class UIManager : MonoBehaviour
 	{
 		if(Time.timeScale == 1)
 		{
+			cursor.GetComponent<CursorManager>().setCursorToDefault();
 			Time.timeScale = 0;
 			paused = true;
 			showPaused();
@@ -135,6 +146,22 @@ public class UIManager : MonoBehaviour
 		foreach(GameObject g in pauseObjects)
 		{
 			g.SetActive(false);
+		}
+	}
+
+	public void hideHelpPanel()
+	{
+		foreach(GameObject g in helpPanelObjects)
+		{
+			g.SetActive(false);
+		}
+	}
+
+	public void showHelpPanel()
+	{
+		foreach (GameObject g in helpPanelObjects)
+		{
+			g.SetActive(true);
 		}
 	}
 
@@ -174,6 +201,22 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
+	public void hideVictoryOptions()
+	{
+		foreach (GameObject g in victoryObjects)
+		{
+			g.SetActive(false);
+		}
+	}
+
+	public void showVictoryOptions()
+	{
+		foreach (GameObject g in victoryObjects)
+		{
+			g.SetActive(true);
+		}
+	}
+
 	private void LoadMainMenu()
 	{
 		LoadLevel ("Main Menu");
@@ -185,6 +228,7 @@ public class UIManager : MonoBehaviour
 		SceneManager.LoadScene (levelName);
 	}
 
+	
 	public bool getPausedState()
 	{
 		return paused;

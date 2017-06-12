@@ -5,11 +5,14 @@ public class CopDealDamage : MonoBehaviour
 {
 	public double damageAmount;    // the amount of damage the cop will do - set this in the inspector
 	public float attackSpeed;
-	private Collider donutInFrontOfCop; // the donut that will be in front of the cop (null if there is no donut)
+	private Collider[] donutInFrontOfCop; // the donut that will be in front of the cop (null if there is no donut)
+
+	private int donutsthisCopIsAttacking = 0;
 
 	void Start()
 	{
-		InvokeRepeating("dealDamageToDonut", 0.5f, attackSpeed);	// repeadetly call this method every x seconds
+		InvokeRepeating("dealDamageToDonut", 0.5f, attackSpeed);    // repeadetly call this method every x seconds
+		donutInFrontOfCop = new Collider[10];
 	}
 
 	void Update()
@@ -21,7 +24,7 @@ public class CopDealDamage : MonoBehaviour
 	{
 		if (isColliderADonut(collider))
 		{
-			donutInFrontOfCop = collider;
+			donutInFrontOfCop[donutsthisCopIsAttacking++] = collider;
 			setCopMovement(CopMoveState.STOPPED);
 		}
 	}
@@ -30,8 +33,12 @@ public class CopDealDamage : MonoBehaviour
 	{
 		if (isDonutInFrontOfCop())
 		{
+			if (donutsthisCopIsAttacking <= 0)
+			{
+				donutInFrontOfCop = new Collider[10];
+			}
+
 			damageDonut();
-			this.gameObject.GetComponent<AudioSource> ().Play ();
 		}
 	}
 
@@ -42,7 +49,14 @@ public class CopDealDamage : MonoBehaviour
 
 	private void damageDonut()
 	{
-		donutInFrontOfCop.gameObject.GetComponent<Health>().takeDamage(damageAmount);
+		for (int donut = 0; donut < 10; donut++)
+		{
+			if (donutInFrontOfCop[donut] != null)
+			{
+				donutInFrontOfCop[donut].gameObject.GetComponent<Health>().takeDamage(damageAmount);
+				this.gameObject.GetComponent<AudioSource>().Play();
+			}
+		}
 	}
 
 	private bool isColliderADonut(Collider obj)
@@ -80,5 +94,15 @@ public class CopDealDamage : MonoBehaviour
 	private enum CopMoveState
 	{
 		MOVING, STOPPED
+	}
+
+	public void copKilledDonut()
+	{
+		donutsthisCopIsAttacking--;
+	}
+
+	public int getDonutsThisCopIsAttacking()
+	{
+		return donutsthisCopIsAttacking;
 	}
 }

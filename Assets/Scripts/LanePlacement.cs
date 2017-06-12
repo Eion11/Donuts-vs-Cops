@@ -7,6 +7,11 @@ public class LanePlacement : MonoBehaviour
 	private string tileName;
 	public GameObject lane;
 
+	public GameObject lane2;
+	public GameObject lane3;
+	public GameObject lane4;
+	public GameObject lane5;
+
 	// Use this for initialization
 	void Start()
 	{

@@ -36,15 +36,15 @@ public class SetTileTransparency : MonoBehaviour
 
 		if (mouseOver && donutOnTile)
 		{
-			GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.4f);
+			GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.6f);
 		}
 		else if (mouseOver)
 		{
-			GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.25f);
+			GetComponent<SpriteRenderer>().color = new Color(1, 1, 0.5f, 0.6f);
 		}
 		else
 		{
-			GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.1f);
+			GetComponent<SpriteRenderer>().color = new Color(1, 1, 0.5f, 0.3f);
 		}
 	}
 }

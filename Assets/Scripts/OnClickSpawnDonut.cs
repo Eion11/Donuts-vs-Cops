@@ -40,7 +40,6 @@ public class OnClickSpawnDonut : MonoBehaviour
 	private void PlaceTower()
 	{
 		string donutName = cursorManager.GetComponent<CursorManager>().selectedDonutName;
-		Debug.Log(donutName);
 		// Create the donut
 		if (donutName.Equals("Donut_Currency"))
 		{

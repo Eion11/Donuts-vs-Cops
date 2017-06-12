@@ -16,6 +16,8 @@ TagManager:
   - ShowOnConfermation
   - ShowOnMainMenu
   - Lane
+  - ShowHelpPanel
+  - ShowOnVictory
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ public class CopsMove : MonoBehaviour
 	{
 		startingX = GetComponent<Transform>().position.x;
 		startingY = GetComponent<Transform>().position.y;
-		startingX = GetComponent<Transform>().position.z;
+		startingZ = GetComponent<Transform>().position.z;
 
 		Invoke("testMovement", 3);
 	}

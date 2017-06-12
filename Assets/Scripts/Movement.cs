@@ -20,8 +20,6 @@ public class Movement : MonoBehaviour
 
 		StartCoroutine("updatePosition", 0);
 		InvokeRepeating("checkIfMaxXReached", 0, 0.1f);
-
-		
 	}
 
 	IEnumerator updatePosition()
@@ -78,8 +76,6 @@ public class Movement : MonoBehaviour
 			CancelInvoke("setMoveSpeedToDefault");
 		}
 	}
-
-
 
 
 

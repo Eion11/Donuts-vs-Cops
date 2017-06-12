@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currencyAmount: 25
-  generationTime: 5
+  generationTime: 7
 --- !u!114 &114572456087711080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,6 +110,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lane: {fileID: 0}
+  lane2: {fileID: 0}
+  lane3: {fileID: 0}
+  lane4: {fileID: 0}
+  lane5: {fileID: 0}
 --- !u!135 &135831122541369434
 SphereCollider:
   m_ObjectHideFlags: 1
